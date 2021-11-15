@@ -1,5 +1,7 @@
 public class c implements productividad,radio,reproductor,telefono {
     boolean on = false;
+    int volume = 0;
+    boolean tfc = false;
 
     @Override
     public void apagar_ecender() {
@@ -11,12 +13,26 @@ public class c implements productividad,radio,reproductor,telefono {
         }
         
     }
-
     @Override
-    public void volumen() {
-        // TODO Auto-generated method stub
+    public void volumenM() {
+        if (volume > -1 ) {
+            volume -= 1;
+        } else {
+            
+        }
         
     }
+
+    @Override
+    public void volumenP() {
+        if (volume > -1 ) {
+            volume += +1;
+        } else {
+            
+        }
+        
+    }
+
 
     @Override
     public void conect_disconect() {
@@ -113,5 +129,5 @@ public class c implements productividad,radio,reproductor,telefono {
         // TODO Auto-generated method stub
         
     }
-    
+
 }
