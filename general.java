@@ -1,4 +1,5 @@
 public interface general {
     public void apagar_ecender();
-    public void volumen();
+    public void volumenM();
+    public void volumenP();
 }
