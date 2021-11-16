@@ -51,13 +51,13 @@ public class c implements productividad,radio,reproductor,telefono {
 
     @Override
     public void call() {
-        // TODO Auto-generated method stub
+                System.out.println("Llamar : ......");
         
     }
 
     @Override
     public void colgar() {
-        // TODO Auto-generated method stub
+                System.out.println("A finalizado la llamada ...");
         
     }
 
