@@ -1,5 +1,5 @@
 public interface telefono extends general{
-    public void conect_disconect();
+    public boolean conect_disconect();
     public void show();
     public void call();
     public void colgar();
