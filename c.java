@@ -36,7 +36,11 @@ public class c implements productividad,radio,reproductor,telefono {
 
     @Override
     public void conect_disconect() {
-        // TODO Auto-generated method stub
+        if (tfc == false) {
+            tfc = true;
+        } else {
+            tfc = false;
+        }
         
     }
 
