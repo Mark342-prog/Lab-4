@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class c implements productividad,radio,reproductor,telefono {
+public class car implements productividad,radio,reproductor,telefono {
     boolean on = false;
     int volume = 0;
     boolean tfc = false;
@@ -78,7 +78,7 @@ public class c implements productividad,radio,reproductor,telefono {
 
     @Override
     public void call_last() {
-        v.error_C();
+        System.out.println("Marcando al utimo contacto llamado......");
         
     }
 
@@ -96,16 +96,37 @@ public class c implements productividad,radio,reproductor,telefono {
         musica.add("4.Hunted VIP");
         System.out.println("Las canciones de prieba son:");
         for (int i = 0; i < musica.size(); i++) {
-            System.out.println(musica.get(i) + " ");}
+            System.out.println(musica.get(i) + " ");
+        }
+        System.out.println("Diga que es lo que quiere escuchar"); 
+            try {
+                sl = Sc.nextInt();
+            } catch (Exception InputMismatchException) {
+                System.out.println("hay un error:    porfavor ingrese un numero valido");
+            }
+        if (sl == 1) {
+            System.out.println("Se esta reproduciendo Live me alone de Michael Jackson");
+        }
+        if (sl == 2) {
+            System.out.println("Se esta reproduciendo Forgotten de Linkin Park");
+        }
+        if (sl == 3) {
+            System.out.println("Se esta reproduciendo Flow de Slippy");
+        }
+        if (sl == 4) {
+            System.out.println("Se esta reproduciendo Hunted VIP de Slippy");
+        }
+        
+            
         
     }
 
     @Override
     public void change() {
-        System.out.println("Las canciones de prieba son:");
+        System.out.println("Las canciones de prueba son:");
         for (int i = 0; i < musica.size(); i++) {
             System.out.println(musica.get(i) + " ");}
-            System.out.println("Dig que es lo que quiere escuchar"); 
+            System.out.println("Diga que es lo que quiere escuchar"); 
             try {
                 sl = Sc.nextInt();
             } catch (Exception InputMismatchException) {
