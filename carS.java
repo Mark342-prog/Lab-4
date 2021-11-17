@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class car implements productividad,radio,reproductor,telefono {
+public class carS implements productividad,radio,reproductor,telefono {
     boolean on = false;
     int volume = 0;
     boolean tfc = false;
     int sl = 0;
+    boolean audio = false;
+    boolean AM = false;
     Scanner Sc = new Scanner(System.in);
     Vista v = new Vista();
+    ArrayList<String> estacionesArrayList = new ArrayList<String>(); 
     ArrayList<String> musica = new ArrayList<String>(); 
-    
-
+    ArrayList<String> planesArrayList = new ArrayList<String>();
     @Override
     public void apagar_ecender() {
         if (on == false ) {
@@ -25,7 +26,7 @@ public class car implements productividad,radio,reproductor,telefono {
         if (volume > -1 ) {
             volume -= 1;
         } else {
-            
+            System.out.println("-----No Es posible-----");
         }
         
     }
@@ -35,7 +36,7 @@ public class car implements productividad,radio,reproductor,telefono {
         if (volume > -1 ) {
             volume += +1;
         } else {
-            
+            System.out.println("-----No es Posible-----");
         }
         
     }
@@ -72,7 +73,13 @@ public class car implements productividad,radio,reproductor,telefono {
 
     @Override
     public void changeS() {
-        v.error_C();
+        if (audio == true) {
+            System.out.println("---- Cambiando a Bocinas ----");
+            audio = false;
+        } else {
+            System.out.println("---- Cambiando a Audifonos ----");
+            audio = true;
+        }
         
     }
 
@@ -170,38 +177,51 @@ public class car implements productividad,radio,reproductor,telefono {
 
     @Override
     public void frecuencia() {
-        // TODO Auto-generated method stub
+        if (AM == false) {
+            AM = true;
+        }
+        else{
+            AM = false;
+        }
         
     }
 
     @Override
     public void estaciones() {
-        // TODO Auto-generated method stub
+        ArrayList<String> emisoras = new ArrayList<String>();
+        for (double i=0.5; i<=10; i++){
+           emisoras.add("Emisora "+i); 
+        }
+        
         
     }
 
     @Override
     public void emisoras() {
-        // TODO Auto-generated method stub
+        System.out.println("-----No hay emisoras aguardas-----");
         
     }
 
     @Override
     public void plan() {
-        // TODO Auto-generated method stub
+        System.out.println("-----Diga los viaje que dea planificar-----");
+        String plan = ("");
+        plan = Sc.nextLine();
+        planesArrayList.add(plan);
         
     }
 
     @Override
     public void targets() {
-        // TODO Auto-generated method stub
+        System.out.println("-----Sacando tarjetas de presentaición-----");
         
     }
 
     @Override
     public void weather() {
-        // TODO Auto-generated method stub
+        System.out.println("-----No hay pronostico actual-----");
         
     }
 
 }
+
